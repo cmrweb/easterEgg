@@ -3,20 +3,26 @@ var key = "";
 var show = false;
 
 function eastEgg(inputName) {
-    if(show===false){
+    if (show === false) {
         key += inputName;
-		if (key === "ArrowDownArrowUp") {
-			show = true;
-			key=""
-			console.log('code 1')
-            //DO SOMETHING
-		} 
-		if (key === "ArrowUpArrowDown") {
-			show = true;
-			key=""
-			console.log('code 2')
-            //DO SOMETHING
-		} 
+        switch (key) {
+            case "ArrowDownArrowUp":
+                show = true;
+                key = ""
+                console.log('code 1')
+                //DO SOMETHING
+                break;
+            case "ArrowUpArrowDown":
+                show = true;
+                key = ""
+                console.log('code 2')
+                //DO SOMETHING
+                break;
+
+            default:
+                //DO SOMETHING
+                break;
+        }
     }
 }
 document.addEventListener('keydown', (e) => {
